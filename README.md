@@ -6,6 +6,9 @@ A simple property cat insurance programme pricing sheet built using Dash.
 
 1. Clone this repository
 2. Ensure you're running Python version 3.7.2 (I recommend using pyenv to control for Python versions)
+```bash
+pyenv local 3.7.2
+```
 3. Start a pipenv shell in the cloned directory
 ```bash
 pipenv shell
