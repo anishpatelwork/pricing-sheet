@@ -16,17 +16,12 @@ server=app.server
 server.secret_key = os.environ.get('secret_key', 'secret')
 app.config['suppress_callback_exceptions']=True
 
-def load_dataframe(filename):
-    df_ = pd.read_csv(filename)
-    return df_  
-
 company_facts = pd.read_csv('data/facts.csv')
-ep_curves = EPCurve(load_dataframe('data/ep_curves.csv'))
-exposure = Exposure(load_dataframe('data/loc.csv'))
+ep_curves = EPCurve(pd.read_csv('data/ep_curves.csv'))
+exposure = Exposure(pd.read_csv('data/loc.csv'))
 key_losses = pd.read_csv('data/keylosses.csv')
 summary = read_text_file('data/summary.txt')
 
-# print(company_facts)
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
@@ -47,9 +42,7 @@ def display_page(pathname):
     else:
         return no_page()
 
-
-
 load_css(app)
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=8050)
