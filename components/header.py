@@ -13,7 +13,7 @@ def get_logo():
     logo = html.Div([
 
         html.Div([
-            html.Img(src='https://static-www.rms.com/assets/blt4a6ddacca47281bf/lg-logo-rms.svg?q=123', height='80', width='80')
+            html.Img(src='https://www.getlivewire.com/wp-content/uploads/2018/10/Your-Logo-here.png', height='80', width='125')
         ], className="ten columns padded"),
 
         # html.Div([

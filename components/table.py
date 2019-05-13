@@ -1,6 +1,6 @@
 import dash_html_components as html
 
-def make_dash_table(df, display_header = False, print_index = False):
+def Table(df, display_header = False, print_index = False):
     ''' Return a dash definition of an HTML table for a Pandas dataframe '''
     table = []
     if display_header == True:
@@ -16,4 +16,4 @@ def make_dash_table(df, display_header = False, print_index = False):
         for i in range(len(row)):
             html_row.append(html.Td([row[i]]))
         table.append(html.Tr(html_row))
-    return table
+    return html.Table(table)

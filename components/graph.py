@@ -1,7 +1,7 @@
 import dash_core_components as dcc
 import plotly.graph_objs as go
 
-def make_ep_graph(dataframe):
+def EPGraph(dataframe):
         
     graph = dcc.Graph(
         figure = go.Figure(
@@ -25,7 +25,7 @@ def make_ep_graph(dataframe):
     )
     return graph
 
-def make_tiv_bar_graph(dataframe, facet):
+def TIVBarGraph(dataframe, facet):
     graph = dcc.Graph(
         figure = go.Figure(
             data=[
