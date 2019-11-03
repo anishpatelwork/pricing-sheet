@@ -11,7 +11,8 @@ from model import Exposure, EPCurve
 
 from pages import register_callbacks, no_page, overview_page, exposure_summary_page, ep_curve_page
 
-app = dash.Dash(__name__)
+css = load_css()
+app = dash.Dash(__name__, external_stylesheets=css)
 server=app.server
 server.secret_key = os.environ.get('secret_key', 'secret')
 app.config['suppress_callback_exceptions']=True
@@ -41,8 +42,6 @@ def display_page(pathname):
         return ep_curve_page(ep_curves)
     else:
         return no_page()
-
-load_css(app)
 
 if __name__ == '__main__':
     app.run_server(debug=True, port=8050)
