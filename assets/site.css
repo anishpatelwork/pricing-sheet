@@ -3,9 +3,9 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #FAFAFA;
-    font-size: 1.1rem;
-    line-height: 1.3;
+    background-color: rgb(250, 250, 250);
+    font-size: 1.0rem;
+    line-height: 1;
     font-family: 'Roboto', sans-serif;
 }
 * {
@@ -18,16 +18,19 @@ body {
     min-height: 300mm;
     padding: 0mm;
     margin: 10mm auto;
-    /* border: 1px #D3D3D3 solid; */
     border-radius: 5px;
     background: white;
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .subpage {
     padding: 1cm;
     border: 5px #ccc solid;
     height: 257mm;
     outline: 2cm whitesmoke solid;
+}
+
+p {
+  padding: 0.5rem;
 }
 
 @page {
@@ -56,7 +59,7 @@ body {
 
 .text-area {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     width: 100%;
     height: 10rem;
     resize: none;
@@ -82,13 +85,13 @@ h6.padded, p.padded{
 
 .blue-text{ color: #8496B8; }
 
-table{ width: 100% }
+/* table{ width: 100% } */
 
-td{ padding: 2px 0px }
+/* td{ padding: 2px 0px } */
 
-tr:nth-child(even) { background-color: #D7DBE1; -webkit-print-color-adjust: exact; }
+/* tr:nth-child(even) { background-color: #D7DBE1; -webkit-print-color-adjust: exact; } */
 
-table.reversed tr:nth-child(odd) { background-color: #D7DBE1; -webkit-print-color-adjust: exact; }
+/* table.reversed tr:nth-child(odd) { background-color: #D7DBE1; -webkit-print-color-adjust: exact; }
 table.reversed tr:nth-child(even) { background-color: white; }
 
 table{ 
@@ -99,10 +102,10 @@ table{
 
 table.tiny-header tr:first-child{
   font-size: 8px;
-}
+} */
 
 
-td, th { border: 0 }
+/* td, th { border: 0 } */
 
 h1, h5, h6{ margin: 0 }
 
@@ -154,7 +157,7 @@ font-weight: bold;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .tab.first {

@@ -32,7 +32,8 @@ def TIVBarGraph(dataframe, facet):
             data=[
                 go.Bar(
                     x=dataframe[facet],
-                    y=dataframe['TIV']
+                    y=dataframe['TIV'], 
+                    marker={'color': '#197BBD'}
                 )
             ],
             layout={

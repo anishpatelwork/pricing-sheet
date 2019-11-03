@@ -5,14 +5,15 @@ from dash.dependencies import Input, Output, State
 import pandas as pd
 import dash_table
 import os
-from css import load_css
+from css import load_css, load_scripts
 from helper import read_text_file
 from model import Exposure, EPCurve
 
 from pages import no_page, overview_page, exposure_summary_page, ep_curve_page
 
 css = load_css()
-app = dash.Dash(__name__, external_stylesheets=css)
+scripts = load_scripts()
+app = dash.Dash(__name__, external_stylesheets=css, external_scripts=scripts)
 server=app.server
 server.secret_key = os.environ.get('secret_key', 'secret')
 app.config['suppress_callback_exceptions']=True
