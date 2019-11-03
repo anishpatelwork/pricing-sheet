@@ -4,7 +4,7 @@ import dash_core_components as dcc
 def Header():
     return html.Div([
         get_logo(),
-        get_header("Company A"),
+        get_header("Pricing Sheet"),
         html.Br([]),
         get_menu()
     ])
@@ -13,7 +13,7 @@ def get_logo():
     logo = html.Div([
 
         html.Div([
-            html.Img(src='https://www.getlivewire.com/wp-content/uploads/2018/10/Your-Logo-here.png', height='80', width='125')
+            html.Img(src='/assets/logo-40px.png')
         ], className="ten columns padded"),
 
     ], className="row gs-header")

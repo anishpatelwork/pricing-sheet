@@ -5,5 +5,8 @@ def TextArea(text, name):
         id = name,
         placeholder='Enter a value...',
         value=text,
-        style={'width': '100%'}
+        className='text-area',
+        draggable='false',
+        disabled='true',
+        rows=8
 )
