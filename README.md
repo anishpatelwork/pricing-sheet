@@ -1,8 +1,8 @@
-# pricing-sheet
+# Pricing Sheet
 
 A simple property cat insurance programme pricing sheet built using Dash.
 
-Demo app hosted https://pricing-sheet.herokuapp.com (give it a few seconds, I'm not paying to host this)
+Demo app hosted https://pricing-sheet.herokuapp.com
 
 ## Local Setup
 

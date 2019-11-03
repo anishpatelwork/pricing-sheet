@@ -16,10 +16,6 @@ def get_logo():
             html.Img(src='https://www.getlivewire.com/wp-content/uploads/2018/10/Your-Logo-here.png', height='80', width='125')
         ], className="ten columns padded"),
 
-        # html.Div([
-        #     dcc.Link('Full View   ', href='/report/full-view')
-        # ], className="two columns page-view no-print")
-
     ], className="row gs-header")
     return logo
 
@@ -44,8 +40,6 @@ def get_menu():
         dcc.Link('Exposure Summary   ', href='/exposure-summary', className="tab"),
 
         dcc.Link('EP curves   ', href='/ep-curves', className="tab"),
-
-        # dcc.Link('Portfolio Impact   ', href='/portfolio-impact', className="tab"),
 
     ], className="row ")
     return menu

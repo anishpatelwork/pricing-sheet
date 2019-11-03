@@ -9,7 +9,7 @@ from css import load_css
 from helper import read_text_file
 from model import Exposure, EPCurve
 
-from pages import register_callbacks, no_page, overview_page, exposure_summary_page, ep_curve_page
+from pages import no_page, overview_page, exposure_summary_page, ep_curve_page
 
 css = load_css()
 app = dash.Dash(__name__, external_stylesheets=css)
@@ -28,8 +28,6 @@ app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div(id='page-content')
 ])
-
-register_callbacks(app, key_losses)
 
 @app.callback(dash.dependencies.Output('page-content', 'children'),
             [dash.dependencies.Input('url', 'pathname')])
