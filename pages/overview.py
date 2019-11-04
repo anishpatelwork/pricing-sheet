@@ -16,7 +16,7 @@ def overview_page(summary, company_facts, key_losses):
             FullRowCard("Key Losses", Table(key_losses, display_header=True))
         ], className="row")
 
-        ], className="page")
+        ], className="container")
 
         
     return page

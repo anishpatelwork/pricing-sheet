@@ -27,5 +27,5 @@ def Table(df, display_header = False, print_index = False):
         body
     ))
 
-    return html.Div(children=html.Table(table, className="highlight"), className="col s11")
+    return html.Div(children=html.Table(table, className="highlight"))
     

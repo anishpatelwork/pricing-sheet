@@ -21,5 +21,5 @@ def ep_curve_page(ep_curves):
             HalfRowCard("EP Earthquake", EPGraph(ep_curves.get_ep_curves(['netprecat'], ['Earthquake'], ['AEP', 'OEP'])))
         ], className="row "),
 
-        ], className="page")
+        ], className="container")
     return page

@@ -21,5 +21,5 @@ def exposure_summary_page(exposure):
             HalfRowCard("TIV by State", TIVBarGraph(exposure.tiv_by_construction(), "Construction"))
         ], className="row "),
         
-    ], className="page")
+    ], className="container")
     return page

@@ -18,8 +18,6 @@ def EPGraph(dataframe):
                 )
             ],
             layout={
-                'xaxis': {'title': 'Return Period'},
-                'yaxis': {'title': 'Loss'},
                 'template': 'plotly_white'
             }
         )
@@ -37,8 +35,6 @@ def TIVBarGraph(dataframe, facet):
                 )
             ],
             layout={
-                'xaxis': {'title': facet},
-                'yaxis': {'title': 'TIV'},
                 'template': 'plotly_white'
             }
         )
