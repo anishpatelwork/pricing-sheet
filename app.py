@@ -8,7 +8,6 @@ import os
 from css import load_css, load_scripts
 from helper import read_text_file
 from model import Exposure, EPCurve
-
 from pages import no_page, overview_page, exposure_summary_page, ep_curve_page
 
 css = load_css()

@@ -3,43 +3,18 @@ import dash_core_components as dcc
 
 def Header():
     return html.Div([
-        get_logo(),
-        get_header("Pricing Sheet"),
-        html.Br([]),
-        get_menu()
-    ])
-
-def get_logo():
-    logo = html.Div([
-
-        html.Div([
-            html.Img(src='/assets/logo-40px.png')
-        ], className="ten columns padded"),
-
-    ], className="row gs-header")
-    return logo
-
-
-def get_header(company_name):
-    header = html.Div([
-
-        html.Div([
-            html.H5(
-                company_name)
-        ], className="twelve columns padded")
-
-    ], className="row gs-header gs-text-header")
-    return header
-
-
-def get_menu():
-    menu = html.Div([
-
-        dcc.Link('Overview   ', href='/overview', className="tab first"),
-
-        dcc.Link('Exposure Summary   ', href='/exposure-summary', className="tab"),
-
-        dcc.Link('EP curves   ', href='/ep-curves', className="tab"),
-
-    ], className="row ")
-    return menu
+        html.Nav( 
+            html.Div(className="nav-wrapper", children=[
+                html.A("Pricing Sheet", href="/", className="brand-logo hide-on-med-and-down"),
+                html.Ul(className="right hide-on-med-and-down", children=[
+                    html.Li(dcc.Link('OVERVIEW', href='/overview')),
+                    html.Li(dcc.Link('EXPOSURE SUMMARY', href='/exposure-summary')),
+                    html.Li(dcc.Link('EP CURVES', href='/ep-curves'))
+                ]),
+                html.Ul(className="hide-on-large-only", children=[
+                    html.Li(dcc.Link('OVERVIEW', href='/overview')),
+                    html.Li(dcc.Link('EXPOSURE SUMMARY', href='/exposure-summary')),
+                    html.Li(dcc.Link('EP CURVES', href='/ep-curves'))
+                ]),
+    ])),
+    ], className="navbar-container")

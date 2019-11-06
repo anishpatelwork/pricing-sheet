@@ -4,6 +4,7 @@ from components import Header, HalfRowCard, Table, TextArea, FullRowCard
 
 
 def overview_page(summary, company_facts, key_losses):
+    
     page = html.Div([
         Header(),
 

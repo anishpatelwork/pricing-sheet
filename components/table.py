@@ -4,6 +4,7 @@ def Table(df, display_header = False, print_index = False):
     ''' Return a dash definition of an HTML table for a Pandas dataframe '''
     table = []
     header = []
+    
     if display_header == True:
         a = []
         if print_index == True:
@@ -17,7 +18,10 @@ def Table(df, display_header = False, print_index = False):
         if print_index == True:
             html_row.append(html.Td(index))
         for i in range(len(row)):
-            html_row.append(html.Td([row[i]]))
+            if is_number(row[i]):
+                html_row.append(html.Td([f'{row[i]:,.2f}']))
+            else:  
+                html_row.append(html.Td([row[i]]))
         body.append(html.Tr(html_row))
     
     table.append(html.Thead(
@@ -27,5 +31,12 @@ def Table(df, display_header = False, print_index = False):
         body
     ))
 
-    return html.Div(children=html.Table(table, className="highlight"))
+    return html.Div(children=html.Table(table, className="highlight responsive"))
+
+def is_number(obj):
+    try:
+        float(obj)
+        return True
+    except ValueError:
+        return False
     

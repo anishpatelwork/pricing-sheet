@@ -17,6 +17,19 @@ p {
   padding: 0.5rem;
 }
 
+.nav-wrapper{
+    background-color: #197BBD;
+    height: 50em;
+}
+
+.navbar-container{
+  padding-bottom: 2rem;
+}
+
+.brand-logo {
+  padding-left: 12px !important;
+}
+
 @page {
     size: A4;
     margin: 0;
